@@ -1,7 +1,12 @@
 "use client";
 
-import "@blocknote/core/style.css";
+import Editor from "./_components/editor";
 
-export default function Home() {
-  return <div>TEST</div>;
+export default function App() {
+  // Renders the editor instance, and its contents as Markdown below.
+  return (
+    <div>
+      <Editor onChange={() => {}} initalContent={""} />
+    </div>
+  );
 }
