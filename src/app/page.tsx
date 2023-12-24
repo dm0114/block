@@ -30,7 +30,7 @@ export default function App() {
         </>
       )}
       {/* <Editor onChange={() => {}} initalContent={""} /> */}
-      <button onClick={handleClickCreate}>생성</button>
+      <button onClick={handleClickCreate}>create</button>
     </div>
   );
 }
