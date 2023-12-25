@@ -5,15 +5,15 @@ import "@blocknote/core/style.css";
 
 interface EditorProps {
   onChange?: (value: string) => void;
-  initalContent?: string;
+  initialContent?: string;
   editable?: boolean;
 }
 
-const Editor = ({ onChange, initalContent, editable }: EditorProps) => {
+const Editor = ({ onChange, initialContent, editable }: EditorProps) => {
   const editor: BlockNoteEditor = useBlockNote({
     editable: editable,
-    initialContent: initalContent
-      ? (JSON.parse(initalContent) as PartialBlock[])
+    initialContent: initialContent
+      ? (JSON.parse(initialContent) as PartialBlock[])
       : undefined,
 
     onEditorContentChange: (editor) => {
