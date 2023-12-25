@@ -4,7 +4,7 @@ import type { BlockNoteEditor, PartialBlock } from "@blocknote/core";
 import "@blocknote/core/style.css";
 
 interface EditorProps {
-  onChange: (value: string) => void;
+  onChange?: (value: string) => void;
   initalContent?: string;
   editable?: boolean;
 }
@@ -17,7 +17,7 @@ const Editor = ({ onChange, initalContent, editable }: EditorProps) => {
       : undefined,
 
     onEditorContentChange: (editor) => {
-      onChange(JSON.stringify(editor.topLevelBlocks, null, 2));
+      onChange?.(JSON.stringify(editor.topLevelBlocks, null, 2));
     },
   });
 
