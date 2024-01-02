@@ -26,7 +26,7 @@ const DocumentDetailPage = ({ params }: DocumentDetailPageProps) => {
   return (
     <div>
       {isAuthenticated && <Link href={`/write/${document._id}`}>수정</Link>}
-      <h1>Document Detail Page</h1>
+
       <Editor initialContent={document.content} editable={false} />
     </div>
   );

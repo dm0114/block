@@ -51,7 +51,7 @@ const WritePage = ({ params }: WritePageProps) => {
           </button>
         </>
       )}
-      <Editor onChange={handleClickUpdate} initialContent={""} />
+      <Editor onChange={handleClickUpdate} initialContent={document.content} />
       <button onClick={handleClickCreate}>create</button>
     </div>
   );
